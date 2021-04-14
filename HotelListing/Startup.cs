@@ -33,6 +33,9 @@ namespace HotelListing
 				opt.AddPolicy("CorsPolicy", builder => builder.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 			});
 
+			services.AddAuthentication();
+			services.ConfigureIdentity();
+
 			services.AddAutoMapper(typeof(MapperInitializer));
 
 			services.AddTransient<IUnitOfWork, UnitOfWork>();
