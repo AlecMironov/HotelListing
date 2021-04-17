@@ -4,13 +4,15 @@ using HotelListing.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace HotelListing.Migrations
 {
 	[DbContext(typeof(DatabaseContext))]
-	partial class DatabaseContextModelSnapshot : ModelSnapshot
+	[Migration("20210417133806_AddedDefaultRoles")]
+	partial class AddedDefaultRoles
 	{
-		protected override void BuildModel(ModelBuilder modelBuilder)
+		protected override void BuildTargetModel(ModelBuilder modelBuilder)
 		{
 #pragma warning disable 612, 618
 			modelBuilder
